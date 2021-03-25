@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { logoutUser } from "../actions";
-
+import Directory from './Directory'
 
   
 class Home extends Component {
@@ -16,7 +16,8 @@ class Home extends Component {
         
      
       <div>
-          
+          <h1 align='center'>Friend's List</h1>
+        <Directory />
         <button onClick={this.handleLogout}>Logout</button>
         {isLoggingOut && <p>Logging Out....</p>}
         {logoutError && <p>Error logging out</p>}
